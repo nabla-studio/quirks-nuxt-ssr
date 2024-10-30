@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@quirks/nuxt": "^0.2.31",
+    "@quirks/ssr": "^0.1.2",
+    "@quirks/store": "^0.27.3",
+    "@quirks/vue": "^0.12.9",
+    "@quirks/wallets": "^0.20.3",
+    "chain-registry": "^1.69.15",
+    "nuxt": "^3.13.2",
+    "vue": "latest",
+    "vue-router": "latest"
+  }
+}

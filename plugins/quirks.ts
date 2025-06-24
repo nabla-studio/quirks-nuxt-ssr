@@ -1,22 +1,23 @@
 import {
-    chain as osmosis,
-    assets as osmosisAssetList,
-  } from 'chain-registry/mainnet/osmosis';
-import type { Config } from "@quirks/store";
+  chain as osmosis,
+  assets as osmosisAssetList,
+} from "chain-registry/mainnet/osmosis";
 import { keplrExtension, leapExtension } from "@quirks/wallets";
-import { quirksPlugin } from '@quirks/vue';
-import { generateConfig, initialStateWithCookie } from '@quirks/ssr'
-   
-const config: Config = generateConfig({
-    wallets: [keplrExtension, leapExtension],
-    chains: [osmosis],
-    assetsLists: [osmosisAssetList],
-});
+import { quirksPlugin } from "@quirks/vue";
+import { generateConfig } from "@quirks/ssr";
 
 export default defineNuxtPlugin((nuxtApp) => {
-    const cookie = useCookie('quirks');
+  const cookie = useCookie("quirks");
 
-    const configWithCookie = initialStateWithCookie(config, JSON.stringify(cookie.value))
+  const store = generateConfig(
+    {
+      wallets: [keplrExtension, leapExtension],
+      chains: [osmosis],
+      assetsLists: [osmosisAssetList],
+    },
+    undefined,
+    JSON.stringify(cookie.value)
+  );
 
-    nuxtApp.vueApp.use(quirksPlugin, configWithCookie);
+  nuxtApp.vueApp.use(quirksPlugin, store);
 });

@@ -10,11 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@quirks/nuxt": "^0.2.31",
-    "@quirks/ssr": "^0.1.2",
-    "@quirks/store": "^0.27.3",
-    "@quirks/vue": "^0.12.9",
-    "@quirks/wallets": "^0.20.3",
+    "@quirks/nuxt": "^0.2.33",
+    "@quirks/ssr": "^0.2.0",
+    "@quirks/store": "^0.29.0",
+    "@quirks/vue": "^0.13.0",
+    "@quirks/wallets": "^0.21.0",
     "chain-registry": "^1.69.15",
     "nuxt": "^3.13.2",
     "vue": "latest",
